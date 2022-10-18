@@ -1,0 +1,36 @@
+html {
+	--text-1: var(--gray-9);
+	--text-2: var(--gray-7);
+
+	@media (--OSdark) {
+		--text-1: var(--gray-1);
+		--text-2: var(--gray-2);
+	}
+
+	--font-family-heading: 'Antonio';
+	--font-family-body: 'League Spartan';	
+	--font-family-logo: 'Antonio';	
+
+	font-family: var(--font-family-body);
+	
+}
+
+
+
+/* Typography */
+.display-1 {
+	font-family: var(--font-family-heading);
+	font-style: normal;
+	font-weight: 600;
+	font-size: var(--font-size-fluid-3);
+	line-height: 120%;
+	text-transform: uppercase;
+	color: var(--text-1);	
+}
+
+p {	
+	font-style: normal;
+	font-weight: 400;
+	font-size: var(--font-size-1);
+	line-height: var(--font-lineheight-3);
+}

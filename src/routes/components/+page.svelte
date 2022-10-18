@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Navigation from '../../components/navigation.svelte';
-	import Header from '../../components/header.svelte';
+	import Navigation from '../../components/Navigation.svelte';
+	import Header from '../../stories/planets-facts/Header.svelte';
 	import DetailBox from '../../components/detailBox.svelte';
 	import { default as StatsData } from '../../components/statsBox.svelte';
 

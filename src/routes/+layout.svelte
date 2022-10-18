@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '../components/header.svelte';
+	import Header from '../stories/planets-facts/Header.svelte'
 </script>
 
 <Header />
@@ -9,6 +9,7 @@
 </main>
 
 <style lang="scss">
+	
 	main {
 		display: flex;
 		flex-direction: column;

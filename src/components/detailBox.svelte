@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PlanetContent, Images, Planet } from 'src/types/Planet';
+	import type { PlanetContent, Images, Planet } from 'src/types/Planet';	
 
 	enum Status {
 		Overview = 'overview',
@@ -47,7 +47,7 @@
 
 	<div class="description">
 		<div class="text">
-			<h1>{planet.name}</h1>
+			<h1 class="display-1">{planet.name}</h1>
 
 			<p>{content.content}</p>
 			<small>Source: {content.source}</small>
@@ -81,6 +81,7 @@
 </div>
 
 <style lang="scss">
+
 	.detailBox {
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
@@ -187,20 +188,4 @@
 		}
 	}
 
-	h1 {
-		font-family: 'Antonio';
-		font-style: normal;
-		font-weight: 600;
-		font-size: var(--font-size-fluid-3);
-		line-height: 120%;
-		text-transform: uppercase;
-	}
-
-	p {
-		font-family: 'League Spartan';
-		font-style: normal;
-		font-weight: 400;
-		font-size: var(--font-size-1);		
-		line-height: var(--font-lineheight-3);
-	}
 </style>

@@ -10,21 +10,37 @@
 </script>
 
 <nav>
-	<div class="burger" on:click={() => (showMenu = !showMenu)}>BU</div>
+	<div class="burger" on:click={() => (showMenu = !showMenu)}>
+		<svg
+			width="24px"
+			height="24px"
+			stroke-width="1.5"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			color="#000000"
+			><path
+				d="M3 5h18M3 12h18M3 19h18"
+				stroke="#000000"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
+	</div>
 	<ul role="menubar" class:showMenu>
 		{#each navItems as { name }}
 			<li role="none">
-				<div class="colorCode" />
 				<a role="menuitem" href={name}>
 					{name}
 				</a>
-				<span class="arrow">></span>
 			</li>
 		{/each}
 	</ul>
 </nav>
 
 <style lang="scss">
+	/*
 	@media screen and (max-width: 400px) and (orientation: portrait) {
 		ul {
 			flex-direction: column;
@@ -96,6 +112,45 @@
 			}
 		}
 	}
+	*/
+
+	nav {
+		display: flex;
+
+		//flex-grow: 1;
+		//flex-basis: calc((30rem - 100%) * 999);
+	}
+
+	@media (min-width: 635px) and (max-width: 767px) {
+		nav {
+			flex-basis: 100%;
+			justify-content: center;
+			margin-bottom: var(--size-5);
+		}
+	}
+
+	@media (max-width: 634px) {
+		ul {
+			display: none;
+		}
+		.burger {
+			display: block;
+		}
+		nav {
+			flex-shrink: 0;
+			flex-basis: auto;
+			align-items: center;
+		}
+	}
+
+	@media (min-width: 635px) {
+		ul {
+			display: flex;
+		}
+		.burger {
+			display: none;
+		}
+	}
 
 	ul {
 		padding-left: 0;
@@ -103,8 +158,14 @@
 		margin: 0;
 		list-style: none;
 
+		gap: var(--size-5);
+		justify-content: space-between;
+		align-items: center;
+
 		li {
 			padding: 0;
+			position: relative;
+			
 		}
 	}
 	a {
@@ -114,15 +175,27 @@
 		font-family: 'League Spartan';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 11px;
+		font-size: var(--font-size-0);
 		line-height: 120%;
+		
 
 		text-align: center;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+		position: relative;
 
 		&:hover {
 			text-decoration: none;
+		}
+
+		&:hover::before {
+			content: '';
+			height: 4px;
+			width: 100%;
+			background: red;
+			position: absolute;
+			top: 0;
+			bottom: 100%;
 		}
 	}
 </style>
