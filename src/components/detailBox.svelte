@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PlanetContent, Images, Planet } from 'src/types/Planet';	
+	import type { PlanetContent, Images, Planet } from 'src/types/Planet';
 
 	enum Status {
 		Overview = 'overview',
@@ -81,7 +81,6 @@
 </div>
 
 <style lang="scss">
-
 	.detailBox {
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
@@ -187,5 +186,4 @@
 			}
 		}
 	}
-
 </style>

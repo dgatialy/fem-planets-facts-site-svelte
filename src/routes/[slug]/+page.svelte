@@ -7,6 +7,5 @@
 	$: planet = $page.data.planet;
 </script>
 
-
 <DetailBox {planet} />
 <StatsBox {data} />

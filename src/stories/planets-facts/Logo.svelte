@@ -9,7 +9,6 @@
 		line-height: 128%;
 		letter-spacing: -1.05px;
 		text-transform: uppercase;
-		//margin-bottom: var(--size-2);
 		padding-bottom: var(--size-1); //center visually
 		display: flex;
 		flex-wrap: nowrap;
@@ -17,17 +16,15 @@
 		min-height: var(--size-10);
 	}
 
-	@media (min-width: 635px) and (max-width: 767px) {
+	@media (max-width: 320px) {
 		div {
-			flex-basis: 100%;
-			justify-content: center;
+			min-width: max-content;
 		}
 	}
 
-	@media (max-width: 634px) {
+	@media (min-width: 768px) and (max-width: 1024px) {
 		div {
-			flex-basis: auto;
-			flex-shrink: 0;
+			justify-content: center;
 		}
 	}
 </style>

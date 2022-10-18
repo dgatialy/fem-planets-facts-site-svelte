@@ -8,14 +8,13 @@ html {
 	}
 
 	--font-family-heading: 'Antonio';
-	--font-family-body: 'League Spartan';	
-	--font-family-logo: 'Antonio';	
+	--font-family-body: 'League Spartan';
+	--font-family-logo: 'Antonio';
 
 	font-family: var(--font-family-body);
-	
+
+	--jupiter-primary: orange;
 }
-
-
 
 /* Typography */
 .display-1 {
@@ -25,10 +24,10 @@ html {
 	font-size: var(--font-size-fluid-3);
 	line-height: 120%;
 	text-transform: uppercase;
-	color: var(--text-1);	
+	color: var(--text-1);
 }
 
-p {	
+p {
 	font-style: normal;
 	font-weight: 400;
 	font-size: var(--font-size-1);

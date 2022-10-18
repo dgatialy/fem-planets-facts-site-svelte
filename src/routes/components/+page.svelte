@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Navigation from '../../components/Navigation.svelte';
+	import Navigation from 'src/components/Navigation.svelte';
 	import Header from '../../stories/planets-facts/Header.svelte';
 	import DetailBox from '../../components/detailBox.svelte';
 	import { default as StatsData } from '../../components/statsBox.svelte';
 
 	import type { Planet } from 'src/types/Planet';
-	import type { Stats } from 'src/types/Stats';	
+	import type { Stats } from 'src/types/Stats';
 	let planets: Planet[];
 	let stats: Stats;
 	/*PlanetStore.subscribe((data) => {
@@ -18,7 +18,7 @@
 			rotation: rotation
 		};
 	});*/
-	$: planet = planets[0];		
+	$: planet = planets[0];
 </script>
 
 <hr />

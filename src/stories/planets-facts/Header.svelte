@@ -4,32 +4,39 @@
 </script>
 
 <header>
-	<Logo />
-	<Navigation />
+	<div><Logo /></div>
+	<div><Navigation /></div>
 </header>
 
 <style lang="scss">
 	header {
 		display: flex;
-		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		gap: var(--size-7);
 		padding-inline-start: var(--size-8);
-		padding-inline-end: var(--size-7);		
+		padding-inline-end: var(--size-7);
 		border-bottom: var(--border-size-1) solid var(--gray-3);
 	}
 
-	@media (max-width: 610px) {
+	header > * {
+		flex-grow: 1;
+		flex-basis: calc((10rem - 100%) * 999);
+		max-inline-size: 100%;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
 		header {
-			flex-wrap: nowrap;
-			gap: var(--size-6);
+			gap: var(--size-2);
+		}
+		header > * {
+			flex-basis: 100%;
 		}
 	}
 
-	@media (min-width: 768px) {
+	@media (max-width: 320px) {
 		header {
 			flex-wrap: nowrap;
-			gap: var(--size-6);
+			min-width: max-content;
 		}
 	}
 </style>
