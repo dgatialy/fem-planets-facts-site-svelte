@@ -13,6 +13,7 @@
 	<button
 		aria-expanded={showMenu}
 		aria-label="{showMenu ? 'Close' : 'Open'} menu"
+		aria-controls="main_menu"
 		class="burger"
 		on:click={() => (showMenu = !showMenu)}
 	>
@@ -34,11 +35,15 @@
 			/>
 		</svg>
 	</button>
-	<ul role="menubar" aria-expanded={showMenu}>
-		{#each navItems as { name }}
-			<li role="none">
-				<div class="border" style="background-color: var(--{name.toLowerCase()}-primary, black)" />
-				<a role="menuitem" href={name}>
+	<ul aria-expanded={showMenu} id="main_menu">
+		{#each navItems as { name }, i}
+			<li>
+				<div
+					class="border"
+					style="background-color: var(--{name.toLowerCase()}-primary, black)"
+					aria-hidden="true"
+				/>
+				<a href="/{name}">
 					{name}
 				</a>
 				<div class="arrowRight">
@@ -51,6 +56,7 @@
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						color="#000000"
+						class="icon"
 						><path
 							d="M9 6l6 6-6 6"
 							stroke="#000000"
@@ -114,6 +120,9 @@
 		ul[aria-expanded='false'] {
 			display: none;
 		}
+		.arrowRight {
+			flex-shrink: 0;
+		}
 		ul[aria-expanded='true'] {
 			display: flex;
 			flex-direction: column;
@@ -135,6 +144,7 @@
 
 			li {
 				display: flex;
+				flex-shrink: 0;
 				align-items: center;
 				width: 100%;
 				max-inline-size: 100%;
@@ -210,5 +220,10 @@
 		&:hover {
 			text-decoration: none;
 		}
+	}
+
+	button{
+		background: none;
+		padding: 0;
 	}
 </style>
