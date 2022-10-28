@@ -1,13 +1,12 @@
 <script lang="ts">
 	import type { Fact } from '../../types/Fact';
-	export const fact: Fact = {} as Fact;
-	export const variant: 'row' | 'column' = 'row';
+	export let data: Fact = {} as Fact;
 </script>
 
-{#if fact}
-	<dl class={variant}>
-		<dt>{fact.term}</dt>
-		<dd>{fact.definition}</dd>
+{#if data}
+	<dl>
+		<dt>{data.term}</dt>
+		<dd>{data.definition}</dd>
 	</dl>
 {/if}
 
@@ -21,34 +20,24 @@
 		font-size: var(--size-fluid-1);
 		font-weight: 700;
 		font-family: var(--font-family-body);
+		margin-block-start: var(--size-1);
 	}
-
-	.column {
-		flex-direction: column;
-		max-inline-size: fit-content;
-		gap: var(--size-fluid-1);
-	}
-
-	.row {
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--size-fluid-2);
-		padding: var(--size-fluid-2) var(--size-fluid-3);
-
-		dt {
-			margin-block-start: var(--size-2);
-		}
-	}
-
 	dl {
 		font-size: var(--size-fluid-3);
 		font-family: var(--font-family-heading);
 		font-weight: 600;
 		line-height: var(--font-lineheight-1);
 		display: flex;
+		flex-basis: 100%;
 
-		padding: var(--size-fluid-2);
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--size-fluid-2);
+		padding: var(--size-fluid-2) var(--size-fluid-3);
+
+		gap: var(--size-fluid-2);
+
 		border: var(--border-size-1) solid var(--gray-3);
 	}
 </style>
