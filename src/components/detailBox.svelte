@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PlanetContent, Images, Planet } from 'src/types/Planet';
+	import Button from '../stories/planets-facts/Button.svelte';
 
 	enum Status {
 		Overview = 'overview',
@@ -11,6 +12,21 @@
 	let current: Status = Status.Overview;
 	$: content = planet[`${current}`];
 	$: image = planet.images.planet;
+
+	function handleMessage(event: CustomEvent) {
+		current = event.detail.ref;
+		switch (event.detail.ref) {
+			case Status.Overview:
+				image = planet.images.planet;
+				break;
+			case Status.Structure:
+				image = planet.images.internal;
+				break;
+			case Status.Geology:
+				image = planet.images.geology;
+				break;
+		}
+	}
 </script>
 
 <div class="detailBox">
@@ -53,29 +69,24 @@
 			<small>Source: {content.source}</small>
 		</div>
 		<div class="buttons">
-			<button
-				class:selected={current === Status.Overview}
-				on:click={() => {
-					current = Status.Overview;
-					image = planet.images.planet;
-				}}><span>01</span>Overview</button
-			>
-
-			<button
-				class:selected={current === Status.Structure}
-				on:click={() => {
-					current = Status.Structure;
-					image = planet.images.internal;
-				}}><span>02</span>Structure</button
-			>
-
-			<button
-				class:selected={current === Status.Geology}
-				on:click={() => {
-					current = Status.Geology;
-					image = planet.images.geology;
-				}}><span>03</span>Geology</button
-			>
+			<Button
+				selected={current === Status.Overview}
+				name={Status.Overview}
+				ref={Status.Overview}
+				on:onClick={handleMessage}
+			/>
+			<Button
+				selected={current === Status.Structure}
+				name={Status.Structure}
+				ref={Status.Structure}
+				on:onClick={handleMessage}
+			/>
+			<Button
+				selected={current === Status.Geology}
+				name={Status.Geology}
+				ref={Status.Geology}
+				on:onClick={handleMessage}
+			/>
 		</div>
 	</div>
 </div>
@@ -150,10 +161,6 @@
 		}
 	}
 
-	button {
-		display: flex;
-	}
-
 	.text {
 		display: flex;
 		flex-direction: column;
@@ -170,20 +177,6 @@
 		flex-direction: column;
 		gap: var(--size-fluid-1);
 		margin-top: var(--size-fluid-2);
-
-		button {
-			padding: var(--size-3) var(--size-5);
-			background: none;
-			border-width: var(--border-size-1);
-
-			&.selected {
-				background-color: #ff3e00;
-				color: white;
-			}
-
-			span {
-				margin-right: var(--size-fluid-1);
-			}
-		}
+		counter-reset: section;
 	}
 </style>
