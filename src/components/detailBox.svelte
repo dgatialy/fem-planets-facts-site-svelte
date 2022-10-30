@@ -32,26 +32,26 @@
 <div class="detailBox">
 	<div class="buttons_top">
 		<Button
-				selected={current === Status.Overview}
-				name={Status.Overview}
-				ref={Status.Overview}
-				variant="compact"
-				on:onClick={handleMessage}
-			/>
-			<Button
-				selected={current === Status.Structure}
-				name={Status.Structure}
-				ref={Status.Structure}
-				variant="compact"
-				on:onClick={handleMessage}
-			/>
-			<Button
-				selected={current === Status.Geology}
-				name={Status.Geology}
-				ref={Status.Geology}
-				variant="compact"
-				on:onClick={handleMessage}
-			/>
+			selected={current === Status.Overview}
+			name={Status.Overview}
+			ref={Status.Overview}
+			variant="compact"
+			on:onClick={handleMessage}
+		/>
+		<Button
+			selected={current === Status.Structure}
+			name={Status.Structure}
+			ref={Status.Structure}
+			variant="compact"
+			on:onClick={handleMessage}
+		/>
+		<Button
+			selected={current === Status.Geology}
+			name={Status.Geology}
+			ref={Status.Geology}
+			variant="compact"
+			on:onClick={handleMessage}
+		/>
 	</div>
 	<div class="image">
 		<div>
@@ -157,18 +157,19 @@
 		.buttons_top {
 			display: flex;
 			position: relative;
+			justify-content: space-between;
+			gap: var(--size-3);
 
-			&::after{
+			&::after {
 				content: '';
 				position: absolute;
 				box-shadow: inset 0 -1px 0 var(--gray-3);
 				height: 1px;
 				width: 100vw;
-				left: calc(var(--size-7)* -1);
+				left: calc(var(--size-7) * -1);
 				bottom: 0;
 				z-index: -1;
 			}
-
 		}
 	}
 
