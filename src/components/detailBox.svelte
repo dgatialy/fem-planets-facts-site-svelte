@@ -31,29 +31,27 @@
 
 <div class="detailBox">
 	<div class="buttons_top">
-		<button
-			class:selected={current === Status.Overview}
-			on:click={() => {
-				current = Status.Overview;
-				image = planet.images.planet;
-			}}><span>01</span>Overview</button
-		>
-
-		<button
-			class:selected={current === Status.Structure}
-			on:click={() => {
-				current = Status.Structure;
-				image = planet.images.internal;
-			}}><span>02</span>Structure</button
-		>
-
-		<button
-			class:selected={current === Status.Geology}
-			on:click={() => {
-				current = Status.Geology;
-				image = planet.images.geology;
-			}}><span>03</span>Geology</button
-		>
+		<Button
+				selected={current === Status.Overview}
+				name={Status.Overview}
+				ref={Status.Overview}
+				variant="compact"
+				on:onClick={handleMessage}
+			/>
+			<Button
+				selected={current === Status.Structure}
+				name={Status.Structure}
+				ref={Status.Structure}
+				variant="compact"
+				on:onClick={handleMessage}
+			/>
+			<Button
+				selected={current === Status.Geology}
+				name={Status.Geology}
+				ref={Status.Geology}
+				variant="compact"
+				on:onClick={handleMessage}
+			/>
 	</div>
 	<div class="image">
 		<div>
@@ -158,6 +156,19 @@
 	@media screen and (max-width: 500px) {
 		.buttons_top {
 			display: flex;
+			position: relative;
+
+			&::after{
+				content: '';
+				position: absolute;
+				box-shadow: inset 0 -1px 0 var(--gray-3);
+				height: 1px;
+				width: 100vw;
+				left: calc(var(--size-7)* -1);
+				bottom: 0;
+				z-index: -1;
+			}
+
 		}
 	}
 
