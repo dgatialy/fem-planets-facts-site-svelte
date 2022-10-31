@@ -54,9 +54,18 @@
 		/>
 	</div>
 	<div class="image">
-		<div>
-			<img src={image} alt="x" />
-		</div>
+		<img
+			src={planet.images.planet}
+			alt="x"
+			class:visible={current === Status.Overview || current === Status.Geology}
+		/>
+		<img src={planet.images.internal} alt="x" class:visible={current === Status.Structure} />
+		<img
+			src={planet.images.geology}
+			alt="x"
+			class="pin"
+			class:visible={current === Status.Geology}
+		/>
 	</div>
 
 	<div class="description">
@@ -100,7 +109,7 @@
 		}
 	}
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 768px) {		
 		.image {
 			grid-column: col-start / span 8;
 		}
@@ -111,12 +120,12 @@
 	}
 
 	@media screen and (max-width: 767px) {
+		.detailBox{
+			grid-template-rows: 1fr 1fr;
+		}
 		.image {
 			grid-column: col-start / span 12;
-			img {
-				min-width: 100%;
-				max-height: 40vh;
-			}
+		
 		}
 
 		.description {
@@ -183,6 +192,24 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+
+		img {
+			position: absolute;
+			display: none;
+			object-fit: contain;
+			max-width: 100%;
+			max-height: 100%;
+
+			&.visible {
+				display: block;
+			}
+
+			&.pin {
+				width: 18%;
+				top: 65%;
+			}
+		}
 	}
 
 	.buttons {
