@@ -36,7 +36,7 @@
 		</svg>
 	</button>
 	<ul aria-expanded={showMenu} id="main_menu">
-		{#each navItems as { name }, i}
+		{#each navItems as { name }}
 			<li>
 				<div
 					class="border"
@@ -222,7 +222,7 @@
 		}
 	}
 
-	button{
+	button {
 		background: none;
 		padding: 0;
 	}

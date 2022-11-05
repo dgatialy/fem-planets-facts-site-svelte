@@ -1,12 +1,11 @@
 import { default as StyledFact } from './Fact.svelte';
 
-
 export default {
 	title: 'Foundation/Fact',
 	component: StyledFact,
 	parameters: {
 		layout: 'fullscreen'
-	},
+	}
 	//argTypes: { variant: { control: 'inline-radio', options: ['column', 'row', undefined] }}
 };
 
@@ -23,5 +22,4 @@ Fact.args = {
 		term: 'Rotation Time',
 		definition: '10.8 hours'
 	}
-}
-
+};

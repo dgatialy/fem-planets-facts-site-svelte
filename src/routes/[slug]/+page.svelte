@@ -3,7 +3,6 @@
 	import Facts from '../../stories/planets-facts/Facts.svelte';
 	import DetailBox from '../../components/detailBox.svelte';
 
-
 	$: planet = $page.data.planet;
 	$: facts = [
 		{

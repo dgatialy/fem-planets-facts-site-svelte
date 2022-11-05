@@ -1,6 +1,5 @@
 import { default as StyledFacts } from './Facts.svelte';
 
-
 export default {
 	title: 'Foundation/Facts',
 	component: StyledFacts,
@@ -35,7 +34,5 @@ Facts.args = {
 			term: 'Average Temp.',
 			definition: '-108°c'
 		}
-		
 	]
-}
-
+};

@@ -3,7 +3,7 @@
 	import type { Images } from '../../types/Planet';
 
 	export let current: Status = Status.Overview;
-	export let images: Images;	
+	export let images: Images;
 </script>
 
 <div class="gallery">
@@ -19,7 +19,7 @@
 <style lang="scss">
 	@media screen and (max-width: 767px) {
 		.gallery {
-			grid-column: col-start / end!important;
+			grid-column: col-start / end !important;
 		}
 	}
 
@@ -29,29 +29,29 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-        padding: var(--size-8);
-        aspect-ratio: 1;
-        align-self: center;
-        
-        justify-self: center;
-        max-height: 500px;
+		padding: var(--size-8);
+		aspect-ratio: 1;
+		align-self: center;
+
+		justify-self: center;
+		max-height: 500px;
 
 		img {
 			//position: absolute;
 			display: none;
-            position: relative;
+			position: relative;
 			object-fit: contain;
 			max-width: 100%;
 			max-height: 100%;
-            
-            //height: 100%;
+
+			//height: 100%;
 
 			&.visible {
 				display: block;
 			}
 
 			&.pin {
-                position: absolute;
+				position: absolute;
 				width: 18%;
 				top: 65%;
 			}

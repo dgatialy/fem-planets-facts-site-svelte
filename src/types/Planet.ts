@@ -22,7 +22,7 @@ export interface Images {
 }
 
 export enum Status {
-    Overview = 'overview',
-    Structure = 'structure',
-    Geology = 'geology'
+	Overview = 'overview',
+	Structure = 'structure',
+	Geology = 'geology'
 }

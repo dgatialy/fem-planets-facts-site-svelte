@@ -39,23 +39,6 @@
 		/>
 	</div>
 	<Gallery {images} {current} />
-	<!--
-	<div class="image">
-		<img
-			src={planet.images.planet}
-			alt="x"
-			class:visible={current === Status.Overview || current === Status.Geology}
-		/>
-		<img src={planet.images.internal} alt="x" class:visible={current === Status.Structure} />
-		<img
-			src={planet.images.geology}
-			alt="x"
-			class="pin"
-			class:visible={current === Status.Geology}
-		/>
-	</div>
-	-->
-
 	<div class="description">
 		<div class="text">
 			<h1 class="display-1">{planet.name}</h1>
