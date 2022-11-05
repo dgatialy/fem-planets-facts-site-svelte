@@ -1,31 +1,16 @@
 <script lang="ts">
-	import type { PlanetContent, Images, Planet } from 'src/types/Planet';
+	import { Status } from '../types/Planet';
+	import Gallery from '../stories/planets-facts/Gallery.svelte';
+	import type { PlanetContent, Planet } from 'src/types/Planet';
 	import Button from '../stories/planets-facts/Button.svelte';
-
-	enum Status {
-		Overview = 'overview',
-		Structure = 'structure',
-		Geology = 'geology'
-	}
 
 	export let planet: Planet;
 	let current: Status = Status.Overview;
-	$: content = planet[`${current}`];
-	$: image = planet.images.planet;
+	$: content = planet[current as keyof Planet] as PlanetContent;
+	$: images = planet.images;
 
 	function handleMessage(event: CustomEvent) {
 		current = event.detail.ref;
-		switch (event.detail.ref) {
-			case Status.Overview:
-				image = planet.images.planet;
-				break;
-			case Status.Structure:
-				image = planet.images.internal;
-				break;
-			case Status.Geology:
-				image = planet.images.geology;
-				break;
-		}
 	}
 </script>
 
@@ -53,6 +38,8 @@
 			on:onClick={handleMessage}
 		/>
 	</div>
+	<Gallery {images} {current} />
+	<!--
 	<div class="image">
 		<img
 			src={planet.images.planet}
@@ -67,6 +54,7 @@
 			class:visible={current === Status.Geology}
 		/>
 	</div>
+	-->
 
 	<div class="description">
 		<div class="text">
@@ -103,37 +91,27 @@
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
 		gap: var(--size-4);
+		//		row-gap: var(--size-8);
 
 		& > * {
 			grid-column: col-start / span 12;
 		}
 	}
 
-	@media screen and (min-width: 768px) {		
-		.image {
-			grid-column: col-start / span 8;
-		}
-
+	@media screen and (min-width: 768px) {
 		.description {
 			grid-column: 9 / -1;
 		}
 	}
 
 	@media screen and (max-width: 767px) {
-		.detailBox{
-			grid-template-rows: 1fr 1fr;
-		}
-		.image {
-			grid-column: col-start / span 12;
-		
-		}
-
 		.description {
 			grid-column: col-start / span 12;
 			display: grid;
 			grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
 			gap: var(--size-4);
-			align-items: center;
+			//align-items: center;
+
 			.text {
 				grid-column: col-start / span 6;
 			}
@@ -146,6 +124,10 @@
 	@media screen and (max-width: 500px) and (orientation: portrait) {
 		.buttons {
 			display: none;
+		}
+
+		.detailBox {
+			grid-template-rows: auto 1fr auto;
 		}
 
 		.description .text {
@@ -186,30 +168,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--size-fluid-3);
-	}
-
-	.image {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-
-		img {
-			position: absolute;
-			display: none;
-			object-fit: contain;
-			max-width: 100%;
-			max-height: 100%;
-
-			&.visible {
-				display: block;
-			}
-
-			&.pin {
-				width: 18%;
-				top: 65%;
-			}
-		}
 	}
 
 	.buttons {

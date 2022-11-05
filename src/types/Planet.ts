@@ -20,3 +20,9 @@ export interface Images {
 	internal: string;
 	geology: string;
 }
+
+export enum Status {
+    Overview = 'overview',
+    Structure = 'structure',
+    Geology = 'geology'
+}
