@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import type { Status } from '../../types/Planet';
 
-	export let selected: boolean = false;
-	export let name: String = 'Button';
-	export let ref: any;
+	export let selected = false;
+	export let name = 'Button';
+	export let ref: Status;
 	export let variant: 'default' | 'compact' = 'default';
 
 	const dispatch = createEventDispatcher();

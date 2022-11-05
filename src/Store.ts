@@ -31,7 +31,7 @@ const allPlanets: Planet[] = data.map((d) => {
 
 export const planets = readable(allPlanets, (set) => {
 	set(allPlanets);
-	return () => {};
+	//return () => {};
 });
 
 const PlanetsStore = writable(allPlanets);
