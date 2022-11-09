@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Planet } from 'src/types/Planet';
-	import { planets } from '../Store';
+	import { planets } from '../../Store';
 	let navItems: Planet[];
-	planets.subscribe((data) => {
+	planets.subscribe((data: Planet[]) => {
 		navItems = data;
 	});
 

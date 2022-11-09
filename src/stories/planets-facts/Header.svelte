@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Navigation from '../../components/Navigation.svelte';
+	import Navigation from './Navigation.svelte';
 	import Logo from './Logo.svelte';
 </script>
 
