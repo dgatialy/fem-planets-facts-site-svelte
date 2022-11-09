@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Facts from '../../stories/planets-facts/Facts.svelte';
-	import DetailBox from '../../components/detailBox.svelte';
+	import DetailBox from '../../stories/planets-facts/Details.svelte';
 
 	$: planet = $page.data.planet;
 	$: facts = [

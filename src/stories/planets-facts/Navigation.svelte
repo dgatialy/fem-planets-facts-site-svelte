@@ -43,7 +43,7 @@
 					style="background-color: var(--{name.toLowerCase()}-primary, black)"
 					aria-hidden="true"
 				/>
-				<a href="/{name}">
+				<a href="/{name}" on:click={() => showMenu = false}>
 					{name}
 				</a>
 				<div class="arrowRight">
@@ -193,6 +193,8 @@
 		padding-right: 0;
 		margin: 0;
 		list-style: none;
+		background:var(--surface-1);
+		z-index: var(--layer-1);
 
 		gap: var(--size-5);
 		justify-content: space-between;

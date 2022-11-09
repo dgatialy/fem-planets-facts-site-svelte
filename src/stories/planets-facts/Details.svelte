@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Status } from '../types/Planet';
-	import Gallery from '../stories/planets-facts/Gallery.svelte';
+	import { Status } from '../../types/Planet';
+	import Gallery from './Gallery.svelte';
 	import type { PlanetContent, Planet } from 'src/types/Planet';
-	import Button from '../stories/planets-facts/Button.svelte';
+	import Button from './Button.svelte';
 
 	export let planet: Planet;
 	let current: Status = Status.Overview;
