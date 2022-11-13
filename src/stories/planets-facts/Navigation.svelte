@@ -19,7 +19,7 @@
 	>
 		<div class="hamburger" aria-hidden="true" />
 	</button>
-	<ul aria-expanded={showMenu} id="main_menu">
+	<ul aria-expanded={showMenu} id="main_menu" data-sveltekit-prefetch>
 		{#each navItems as { name }}
 			<li>
 				<div
