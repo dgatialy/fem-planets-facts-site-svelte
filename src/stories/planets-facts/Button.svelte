@@ -49,7 +49,7 @@
 
 		&.selected {
 			background-color: var(--planet-primary);
-			color: var(--md-sys-color-on-primary);			
+			color: var(--md-sys-color-on-primary);
 		}
 
 		&::before {

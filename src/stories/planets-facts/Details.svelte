@@ -44,7 +44,11 @@
 			<h1 class="display-1">{planet.name}</h1>
 
 			<p>{content.content}</p>
-			<span class="source">Source: <a href={content.source} target="_blank">Wikipedia</a><span class="source__icon" /></span>
+			<span class="source"
+				>Source: <a href={content.source} target="_blank">Wikipedia</a><span
+					class="source__icon"
+				/></span
+			>
 		</div>
 		<div class="buttons">
 			<Button
@@ -73,7 +77,7 @@
 	.detailBox {
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
-		gap: var(--size-4);		
+		gap: var(--size-4);
 
 		& > * {
 			grid-column: col-start / span 12;
@@ -91,7 +95,7 @@
 			grid-column: col-start / span 12;
 			display: grid;
 			grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
-			gap: var(--size-4);			
+			gap: var(--size-4);
 
 			.text {
 				grid-column: col-start / span 6;
@@ -152,22 +156,20 @@
 		gap: var(--size-1);
 		align-items: baseline;
 
-		a{
+		a {
 			color: inherit;
 			text-decoration: underline;
 			font-weight: 700;
-
 		}
 	}
 
-	.source__icon{
+	.source__icon {
 		display: inline-block;
 		width: 12px;
 		height: 12px;
 		mask: url('assets/icon-source.svg') no-repeat center;
 		background-color: var(--md-sys-color-on-surface);
-				
-			}
+	}
 
 	.text {
 		display: flex;

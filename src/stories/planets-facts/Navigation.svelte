@@ -84,13 +84,13 @@
 		ul[aria-expanded='false'] {
 			display: none;
 		}
-		
+
 		.arrowRight {
 			flex-shrink: 0;
 			width: 15px;
 			height: 15px;
 			mask: url('assets/icon-chevron.svg') no-repeat center;
-			background-color: var(--md-sys-color-on-surface);			
+			background-color: var(--md-sys-color-on-surface);
 		}
 
 		ul[aria-expanded='true'] {

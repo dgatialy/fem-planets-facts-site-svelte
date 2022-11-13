@@ -29,7 +29,7 @@
 		}
 	}
 
-	a{
+	a {
 		text-decoration: none;
 		color: var(--md-sys-color-on-background);
 	}
