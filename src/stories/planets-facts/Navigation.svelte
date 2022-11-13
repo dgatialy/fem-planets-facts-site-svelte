@@ -17,7 +17,7 @@
 		class="burger"
 		on:click={() => (showMenu = !showMenu)}
 	>
-		<div class="hamburger" aria-hidden="true" />
+		<span class="hamburger" aria-hidden="true" />
 	</button>
 	<ul aria-expanded={showMenu} id="main_menu">
 		{#each navItems as { name }}
@@ -195,6 +195,7 @@
 		padding: 0;
 	}
 	.hamburger {
+		display: inline-block;
 		width: 24px;
 		height: 17px;
 		mask: url('/assets/icon-hamburger.svg') no-repeat center;
