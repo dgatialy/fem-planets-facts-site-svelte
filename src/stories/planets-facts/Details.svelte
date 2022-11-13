@@ -40,11 +40,11 @@
 	</div>
 	<Gallery {images} {current} />
 	<div class="description">
-		<div class="text on-background-text">
+		<div class="text">
 			<h1 class="display-1">{planet.name}</h1>
 
 			<p>{content.content}</p>
-			<small>Source: {content.source}</small>
+			<span class="source">Source: <a href={content.source} target="_blank">Wikipedia</a><span class="source__icon" /></span>
 		</div>
 		<div class="buttons">
 			<Button
@@ -97,6 +97,7 @@
 
 			.text {
 				grid-column: col-start / span 6;
+				color: var(--md-sys-color-on-background);
 			}
 			.buttons {
 				grid-column: 8 / span 7;
@@ -147,9 +148,28 @@
 		}
 	}
 
-	small {
+	.source {
 		opacity: 0.5;
+		display: flex;
+		gap: var(--size-1);
+		align-items: baseline;
+
+		a{
+			color: inherit;
+			text-decoration: underline;
+			font-weight: 700;
+
+		}
 	}
+
+	.source__icon{
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		mask: url('assets/icon-source.svg') no-repeat center;
+		background-color: var(--md-sys-color-on-surface);
+				
+			}
 
 	.text {
 		display: flex;

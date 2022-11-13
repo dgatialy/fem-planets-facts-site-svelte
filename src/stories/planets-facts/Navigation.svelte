@@ -17,20 +17,7 @@
 		class="burger"
 		on:click={() => (showMenu = !showMenu)}
 	>
-		<svg
-			aria-hidden="true"
-			width="24px"
-			height="24px"
-			stroke-width="1.5"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M3 5h18M3 12h18M3 19h18"
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
+		<div class="hamburger" aria-hidden="true" />
 	</button>
 	<ul aria-expanded={showMenu} id="main_menu">
 		{#each navItems as { name }}
@@ -43,22 +30,7 @@
 				<a href="/{name}" on:click={() => (showMenu = false)}>
 					{name}
 				</a>
-				<div class="arrowRight">
-					<svg
-						aria-hidden="true"
-						width="24px"
-						height="24px"
-						stroke-width="1.5"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-						><path
-							d="M9 6l6 6-6 6"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/></svg
-					>
-				</div>
+				<div class="arrowRight" aria-hidden="true" />
 			</li>
 		{/each}
 	</ul>
@@ -112,16 +84,15 @@
 		ul[aria-expanded='false'] {
 			display: none;
 		}
+		
 		.arrowRight {
 			flex-shrink: 0;
-
-			svg {
-				stroke: var(--md-sys-color-on-surface);
-				opacity: 0.4;
-				width: 15px;
-				height: 15px;
-			}
+			width: 15px;
+			height: 15px;
+			mask: url('assets/icon-chevron.svg') no-repeat center;
+			background-color: var(--md-sys-color-on-surface);			
 		}
+
 		ul[aria-expanded='true'] {
 			display: flex;
 			flex-direction: column;
@@ -138,10 +109,6 @@
 			gap: 0;
 			background-color: var(--md-sys-color-surface);
 			border-top: var(--border-size-1) solid var(--md-sys-color-surface-variant);
-
-			svg {
-				fill: none;
-			}
 
 			li {
 				display: flex;
@@ -184,9 +151,6 @@
 		}
 		.arrowRight {
 			display: none;
-			svg {
-				fill: none;
-			}
 		}
 	}
 
@@ -230,7 +194,10 @@
 		background: none;
 		padding: 0;
 	}
-	.burger svg {
-		stroke: var(--md-sys-color-on-surface);
+	.hamburger {
+		width: 24px;
+		height: 17px;
+		mask: url('assets/icon-hamburger.svg') no-repeat center;
+		background-color: var(--md-sys-color-on-surface);
 	}
 </style>
