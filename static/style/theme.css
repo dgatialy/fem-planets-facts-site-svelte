@@ -10,6 +10,7 @@
 
 	font-family: var(--font-family-body);
 	background: var(--md-sys-color-surface);
+	background-image: url('/assets/background-stars.svg');
 	min-height: 100vh;
 }
 
@@ -53,7 +54,7 @@
 p {
 	font-style: normal;
 	font-weight: 400;
-	font-size: var(--font-size-fluid-0);
+	font-size: var(--font-size-1);
 	line-height: var(--font-lineheight-3);
 }
 
@@ -63,5 +64,5 @@ main {
 	margin-top: var(--size-fluid-4);
 	gap: var(--size-fluid-5);
 	padding-inline: var(--size-7);
-	margin-bottom: var(--size-fluid-4);
+	padding-bottom: var(--size-fluid-4);
 }
