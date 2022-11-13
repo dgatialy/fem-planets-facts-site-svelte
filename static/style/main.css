@@ -3,8 +3,8 @@
 @import 'https://unpkg.com/open-props';
 @import 'https://unpkg.com/open-props/normalize.min.css';
 
-@import './vars.scss';
-@import './theme.scss';
+@import './vars.css';
+@import './theme.css';
 
 .icon {
 	width: 0.75em;
