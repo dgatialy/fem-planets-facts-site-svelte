@@ -40,7 +40,7 @@
 	</div>
 	<Gallery {images} {current} />
 	<div class="description">
-		<div class="text">
+		<div class="text on-background-text">
 			<h1 class="display-1">{planet.name}</h1>
 
 			<p>{content.content}</p>
@@ -137,20 +137,24 @@
 			&::after {
 				content: '';
 				position: absolute;
-				box-shadow: inset 0 -1px 0 var(--gray-3);
+				box-shadow: inset 0 -1px 0 var(--md-sys-color-surface-variant);
 				height: 1px;
 				width: 100vw;
 				left: calc(var(--size-7) * -1);
 				bottom: 0;
-				z-index: -1;
+				z-index: 0;
 			}
 		}
+	}
+
+	small{
+		opacity: 0.5;
 	}
 
 	.text {
 		display: flex;
 		flex-direction: column;
-		gap: var(--size-fluid-3);
+		gap: var(--size-fluid-3);		
 	}
 
 	.buttons {

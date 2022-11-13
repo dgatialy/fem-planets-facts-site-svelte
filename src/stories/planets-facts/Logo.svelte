@@ -14,6 +14,7 @@
 		flex-wrap: nowrap;
 		align-items: center;
 		min-height: var(--size-10);
+		color: var(--md-sys-color-on-background);
 	}
 
 	@media (max-width: 320px) {

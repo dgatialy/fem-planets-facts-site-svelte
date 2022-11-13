@@ -14,13 +14,16 @@
 	dl,
 	dt {
 		text-transform: uppercase;
+		color: var(--md-sys-color-on-background);
 	}
 
 	dt {
-		font-size: var(--size-fluid-1);
+		font-size: var(--font-size-0);
 		font-weight: 700;
 		font-family: var(--font-family-body);
-		margin-block-start: var(--size-1);
+		letter-spacing: var(--font-letterspacing-4);
+		margin-block-start: var(--size-1);		
+		opacity: 0.5;
 	}
 	dl {
 		font-size: var(--size-fluid-3);
@@ -38,6 +41,6 @@
 
 		gap: var(--size-fluid-2);
 
-		border: var(--border-size-1) solid var(--gray-3);
+		border: var(--border-size-1) solid var(--md-sys-color-outline-variant);		
 	}
 </style>

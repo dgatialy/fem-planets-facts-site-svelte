@@ -1,15 +1,43 @@
-html {
-	--text-1: var(--gray-9);
-	--text-2: var(--gray-7);
+@import url(theme/tokens.css);
+@import url(theme/colors.module.css);
+@import url(theme/theme.light.css) (prefers-color-scheme: light);
+@import url(theme/theme.dark.css) (prefers-color-scheme: dark);
 
+.theme {
 	--font-family-heading: 'Antonio';
 	--font-family-body: 'League Spartan';
 	--font-family-logo: 'Antonio';
+	--planet-primary: var(--md-sys-color-primary);
 
 	font-family: var(--font-family-body);
+	background: var(--md-sys-color-surface);
+	min-height: 100vh;
+}
 
-	--jupiter-primary: orange;
-	--planet-primary: purple;
+@media (prefers-color-scheme: dark) {
+	.theme {
+		--planet-earth: #5ed4ff;
+		--planet-mercury: #92ccff;
+		--planet-mars: #ffb4a2;
+		--planet-jupiter: #ffb68e;
+		--planet-saturn: #f6be48;
+		--planet-uranus: #6adbae;
+		--planet-neptune: #b4c5ff;
+		--planet-venus: #ffb86e;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.theme {
+		--planet-earth: #006782;
+		--planet-mercury: #006497;
+		--planet-mars: #ae3110;
+		--planet-jupiter: #974810;
+		--planet-saturn: #7b5800;
+		--planet-uranus: #006c4e;
+		--planet-neptune: #0c54d7;
+		--planet-venus: #8a5100;
+	}
 }
 
 /* Typography */
@@ -20,12 +48,21 @@ html {
 	font-size: var(--font-size-fluid-3);
 	line-height: 120%;
 	text-transform: uppercase;
-	color: var(--text-1);
+	color: var(--md-sys-color-primary);
 }
 
 p {
 	font-style: normal;
 	font-weight: 400;
-	font-size: var(--font-size-1);
+	font-size: var(--font-size-fluid-0);
 	line-height: var(--font-lineheight-3);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	margin-top: var(--size-fluid-4);
+	gap: var(--size-fluid-5);
+	padding-inline: var(--size-7);
+	margin-bottom: var(--size-fluid-4);
 }

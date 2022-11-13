@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '../../stories/planets-facts/Header.svelte';
 	import { page } from '$app/stores';
 	import Facts from '../../stories/planets-facts/Facts.svelte';
 	import DetailBox from '../../stories/planets-facts/Details.svelte';
@@ -24,5 +25,12 @@
 	];
 </script>
 
-<DetailBox {planet} />
-<Facts {facts} />
+<div data-theme={planet.name.toLowerCase()} class="theme">
+
+	<Header />
+
+	<main>
+		<DetailBox {planet} />
+		<Facts {facts} />
+	</main>
+</div>

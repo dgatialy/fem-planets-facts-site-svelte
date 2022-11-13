@@ -27,6 +27,8 @@
 		font-weight: var(--font-weight-7);
 		line-height: var(--font-lineheight-3);
 		letter-spacing: var(--font-letterspacing-4);
+		border-color: var(--md-sys-color-outline-variant);
+		color: var(--md-sys-color-on-background);
 	}
 
 	button.compact {
@@ -47,7 +49,13 @@
 
 		&.selected {
 			background-color: var(--planet-primary);
-			color: white;
+			color: var(--md-sys-color-on-primary);
+
+			/*
+			&:hover{
+				background-color: var(--md-sys-color-surface-variant);
+			}
+			*/
 		}
 
 		&::before {
@@ -55,6 +63,7 @@
 			content: counter(section, decimal-leading-zero);
 			display: block;
 			max-inline-size: 2ch;
+			opacity: 0.5;
 		}
 	}
 </style>

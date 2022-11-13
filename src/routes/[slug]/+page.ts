@@ -8,8 +8,7 @@ export const load: PageLoad = ({ params }) => {
 
 	planets.subscribe((data) => {
 		planet = data.find((p) => p.name === params.slug);
-
-		console.log(planet)
+		
 		if (!planet) throw error(404, 'Not found');
 	});
 

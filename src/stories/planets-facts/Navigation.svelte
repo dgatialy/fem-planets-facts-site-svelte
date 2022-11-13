@@ -6,7 +6,7 @@
 		navItems = data;
 	});
 
-	let showMenu = false;
+	let showMenu = false;	
 </script>
 
 <nav aria-label="Main menu">
@@ -23,12 +23,9 @@
 			height="24px"
 			stroke-width="1.5"
 			viewBox="0 0 24 24"
-			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			color="#000000"
 			><path
 				d="M3 5h18M3 12h18M3 19h18"
-				stroke="#000000"
 				stroke-width="1.5"
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -39,11 +36,11 @@
 		{#each navItems as { name }}
 			<li>
 				<div
-					class="border"
-					style="background-color: var(--{name.toLowerCase()}-primary, black)"
+					class="border"					
+					style="background-color: var(--planet-{name.toLowerCase()}, black)"
 					aria-hidden="true"
 				/>
-				<a href="/{name}" on:click={() => showMenu = false}>
+				<a href="/{name}" on:click={() => (showMenu = false)}>
 					{name}
 				</a>
 				<div class="arrowRight">
@@ -53,13 +50,9 @@
 						height="24px"
 						stroke-width="1.5"
 						viewBox="0 0 24 24"
-						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
-						color="#000000"
-						class="icon"
 						><path
 							d="M9 6l6 6-6 6"
-							stroke="#000000"
 							stroke-width="1.5"
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -75,7 +68,7 @@
 	nav {
 		display: flex;
 		height: 100%;
-		align-items: center;
+		align-items: center;		
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) {
@@ -107,8 +100,7 @@
 
 			.border {
 				height: 4px;
-				width: 100%;
-				background: red;
+				width: 100%;			
 				position: absolute;
 				top: 0;
 				display: none;
@@ -122,6 +114,13 @@
 		}
 		.arrowRight {
 			flex-shrink: 0;
+
+			svg{
+				stroke: var(--md-sys-color-on-surface);
+				opacity: 0.4;
+				width: 15px;
+				height: 15px;
+			}
 		}
 		ul[aria-expanded='true'] {
 			display: flex;
@@ -137,6 +136,8 @@
 			padding-inline-end: var(--size-7);
 			padding-top: var(--size-5);
 			gap: 0;
+			background-color: var(--md-sys-color-surface);
+			border-top: var(--border-size-1) solid var(--md-sys-color-surface-variant);
 
 			svg {
 				fill: none;
@@ -149,7 +150,7 @@
 				width: 100%;
 				max-inline-size: 100%;
 				gap: var(--size-3);
-				border-bottom: 1px solid #e2e2e2;
+				border-bottom: 1px solid var(--md-sys-color-surface-variant);
 				padding: var(--size-3) 0;
 
 				a {
@@ -162,6 +163,7 @@
 					height: 100%;
 					aspect-ratio: 1;
 					border-radius: 50%;
+					display: block!important;
 				}
 			}
 		}
@@ -192,8 +194,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		margin: 0;
-		list-style: none;
-		background:var(--surface-1);
+		list-style: none;		
 		z-index: var(--layer-1);
 
 		gap: var(--size-5);
@@ -218,6 +219,7 @@
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		position: relative;
+		color: var(--md-sys-color-on-background);
 
 		&:hover {
 			text-decoration: none;
@@ -227,5 +229,8 @@
 	button {
 		background: none;
 		padding: 0;
+	}
+	.burger svg {
+		stroke: var(--md-sys-color-on-surface);
 	}
 </style>
