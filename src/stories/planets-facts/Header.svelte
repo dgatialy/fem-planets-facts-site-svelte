@@ -13,7 +13,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--size-7);
-		padding-inline-start: var(--size-8);
+		padding-inline-start: var(--size-7);
 		padding-inline-end: var(--size-7);
 		border-bottom: var(--border-size-1) solid var(--md-sys-color-surface-variant);
 	}
