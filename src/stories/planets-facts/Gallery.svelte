@@ -9,11 +9,11 @@
 <div class="gallery">
 	<img
 		src={images.planet}
-		alt="x"
+		alt="Shows the surface of the planet."
 		class:visible={current === Status.Overview || current === Status.Geology}
 	/>
-	<img src={images.internal} alt="x" class:visible={current === Status.Structure} />
-	<img src={images.geology} alt="x" class="pin" class:visible={current === Status.Geology} />
+	<img src={images.internal} alt="Shows the structure of the planet." class:visible={current === Status.Structure} />
+	<img src={images.geology} alt="Shows the geology of the planet." class="pin" class:visible={current === Status.Geology} />
 </div>
 
 <style lang="scss">
