@@ -12,6 +12,7 @@
 	background: var(--md-sys-color-surface);
 	background-image: url('/assets/background-stars.svg');
 	min-height: 100vh;
+	position: relative;
 }
 
 @media (prefers-color-scheme: dark) {

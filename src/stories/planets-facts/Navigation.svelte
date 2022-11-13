@@ -100,7 +100,7 @@
 			top: var(--size-10);
 			left: 0;
 			width: 100%;
-			height: calc(100vh - var(--size-10));
+			height: 100%;			
 			position: absolute;
 			align-items: center;
 			padding-inline-start: var(--size-8);
