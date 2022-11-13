@@ -35,9 +35,9 @@ Details.args = {
 		radius: '24,622 KM',
 		temperature: '-201°c',
 		images: {
-			planet: 'http://localhost:5173/assets/planet-neptune.svg',
-			internal: 'http://localhost:5173/assets/planet-neptune-internal.svg',
-			geology: 'http://localhost:5173/assets/geology-neptune.png'
+			planet: 'assets/planet-neptune.svg',
+			internal: 'assets/planet-neptune-internal.svg',
+			geology: 'assets/geology-neptune.png'
 		}
 	}
 };
