@@ -1,5 +1,5 @@
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
-import '../static/style/main.scss';
+import '../static/style/main.css';
 
 const customViewports = {
 	desktop: {
