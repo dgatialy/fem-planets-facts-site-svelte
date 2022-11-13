@@ -89,7 +89,7 @@
 			flex-shrink: 0;
 			width: 15px;
 			height: 15px;
-			mask: url('assets/icon-chevron.svg') no-repeat center;
+			mask: url('./assets/icon-chevron.svg') no-repeat center;
 			background-color: var(--md-sys-color-on-surface);
 		}
 
@@ -197,7 +197,7 @@
 	.hamburger {
 		width: 24px;
 		height: 17px;
-		mask: url('assets/icon-hamburger.svg') no-repeat center;
+		mask: url('./assets/icon-hamburger.svg') no-repeat center;
 		background-color: var(--md-sys-color-on-surface);
 	}
 </style>

@@ -167,7 +167,7 @@
 		display: inline-block;
 		width: 12px;
 		height: 12px;
-		mask: url('assets/icon-source.svg') no-repeat center;
+		mask: url('./assets/icon-source.svg') no-repeat center;
 		background-color: var(--md-sys-color-on-surface);
 	}
 
