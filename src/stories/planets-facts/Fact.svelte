@@ -22,7 +22,7 @@
 		font-weight: 700;
 		font-family: var(--font-family-body);
 		letter-spacing: var(--font-letterspacing-4);
-		margin-block-start: var(--size-1);		
+		margin-block-start: var(--size-1);
 		opacity: 0.5;
 	}
 	dl {
@@ -41,6 +41,6 @@
 
 		gap: var(--size-fluid-2);
 
-		border: var(--border-size-1) solid var(--md-sys-color-outline-variant);		
+		border: var(--border-size-1) solid var(--md-sys-color-outline-variant);
 	}
 </style>

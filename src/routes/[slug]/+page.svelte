@@ -26,7 +26,6 @@
 </script>
 
 <div data-theme={planet.name.toLowerCase()} class="theme">
-
 	<Header />
 
 	<main>

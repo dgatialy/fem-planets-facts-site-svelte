@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Navigation from './Navigation.svelte';
-	import Logo from './Logo.svelte';	
+	import Logo from './Logo.svelte';
 </script>
 
 <header>

@@ -6,7 +6,7 @@
 		navItems = data;
 	});
 
-	let showMenu = false;	
+	let showMenu = false;
 </script>
 
 <nav aria-label="Main menu">
@@ -36,7 +36,7 @@
 		{#each navItems as { name }}
 			<li>
 				<div
-					class="border"					
+					class="border"
 					style="background-color: var(--planet-{name.toLowerCase()}, black)"
 					aria-hidden="true"
 				/>
@@ -68,7 +68,7 @@
 	nav {
 		display: flex;
 		height: 100%;
-		align-items: center;		
+		align-items: center;
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) {
@@ -100,7 +100,7 @@
 
 			.border {
 				height: 4px;
-				width: 100%;			
+				width: 100%;
 				position: absolute;
 				top: 0;
 				display: none;
@@ -115,7 +115,7 @@
 		.arrowRight {
 			flex-shrink: 0;
 
-			svg{
+			svg {
 				stroke: var(--md-sys-color-on-surface);
 				opacity: 0.4;
 				width: 15px;
@@ -163,7 +163,7 @@
 					height: 100%;
 					aspect-ratio: 1;
 					border-radius: 50%;
-					display: block!important;
+					display: block !important;
 				}
 			}
 		}
@@ -194,7 +194,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		margin: 0;
-		list-style: none;		
+		list-style: none;
 		z-index: var(--layer-1);
 
 		gap: var(--size-5);

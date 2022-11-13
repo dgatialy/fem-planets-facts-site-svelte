@@ -147,14 +147,14 @@
 		}
 	}
 
-	small{
+	small {
 		opacity: 0.5;
 	}
 
 	.text {
 		display: flex;
 		flex-direction: column;
-		gap: var(--size-fluid-3);		
+		gap: var(--size-fluid-3);
 	}
 
 	.buttons {
