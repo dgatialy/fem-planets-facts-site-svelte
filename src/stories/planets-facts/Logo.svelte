@@ -1,4 +1,4 @@
-<div>THE PLANETS</div>
+<div><a href="/Earth">THE PLANETS</a></div>
 
 <style lang="scss">
 	div {
@@ -27,5 +27,10 @@
 		div {
 			justify-content: center;
 		}
+	}
+
+	a{
+		text-decoration: none;
+		color: var(--md-sys-color-on-background);
 	}
 </style>
