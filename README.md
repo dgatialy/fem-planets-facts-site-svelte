@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/planets-facts-using-sveltekit-and-material-design-2obFNf3NiS)
 - Live Site URL: [Add live site URL here](https://astounding-biscotti-8d05ed.netlify.app)
 
 ## My process
