@@ -37,14 +37,11 @@
 		max-height: 500px;
 
 		img {
-			//position: absolute;
 			display: none;
 			position: relative;
 			object-fit: contain;
 			max-width: 100%;
-			max-height: 100%;
-
-			//height: 100%;
+			max-height: 100%;			
 
 			&.visible {
 				display: block;

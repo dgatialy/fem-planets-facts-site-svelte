@@ -73,8 +73,7 @@
 	.detailBox {
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
-		gap: var(--size-4);
-		//		row-gap: var(--size-8);
+		gap: var(--size-4);		
 
 		& > * {
 			grid-column: col-start / span 12;
@@ -92,8 +91,7 @@
 			grid-column: col-start / span 12;
 			display: grid;
 			grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
-			gap: var(--size-4);
-			//align-items: center;
+			gap: var(--size-4);			
 
 			.text {
 				grid-column: col-start / span 6;

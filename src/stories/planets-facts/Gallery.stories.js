@@ -15,13 +15,11 @@ export default {
 	}
 };
 
-// More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args
 const Template = (args) => ({
 	Component: StyledGallery,
 	props: args
 });
 
-// More on args: https://storybook.js.org/docs/svelte/writing-stories/args
 export const Gallery = Template.bind({});
 Gallery.args = {
 	images: {

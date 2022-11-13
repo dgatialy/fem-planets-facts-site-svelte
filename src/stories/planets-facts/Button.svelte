@@ -49,13 +49,7 @@
 
 		&.selected {
 			background-color: var(--planet-primary);
-			color: var(--md-sys-color-on-primary);
-
-			/*
-			&:hover{
-				background-color: var(--md-sys-color-surface-variant);
-			}
-			*/
+			color: var(--md-sys-color-on-primary);			
 		}
 
 		&::before {
